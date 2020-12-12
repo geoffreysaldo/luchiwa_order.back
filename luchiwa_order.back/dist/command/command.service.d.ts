@@ -9,5 +9,6 @@ export declare class CommandService {
     searchClient(client: Client): Promise<Command[]>;
     createCommand(command: Command): Promise<Command>;
     getCommand(mode: Mode): Promise<Command[]>;
+    getCommands(): Promise<Command[]>;
     deleteCommand(id: string): Promise<void>;
 }

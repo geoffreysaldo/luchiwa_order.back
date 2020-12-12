@@ -27,6 +27,9 @@ let CommandController = class CommandController {
     getCommand(mode) {
         return this.commandService.getCommand(mode);
     }
+    getCommands() {
+        return this.commandService.getCommands();
+    }
     deleteCommand(id) {
         return this.commandService.deleteCommand(id);
     }
@@ -45,6 +48,12 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CommandController.prototype, "getCommand", null);
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], CommandController.prototype, "getCommands", null);
 __decorate([
     common_1.Delete('/:id'),
     __param(0, common_1.Param('id')),

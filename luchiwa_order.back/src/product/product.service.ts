@@ -17,13 +17,16 @@ export class ProductService {
 
 
     async createProduct(product: Product): Promise<Product> {
+        console.log(product);
         const createdProduct = new this.productModel(product)
         return createdProduct.save()
     }
 
-    async updateProduct(updateProduct: UpdateProductDto): Promise<Product>{
-        const {id, price} = updateProduct;
-        return this.productModel.findOneAndUpdate({_id: id}, {price: price});
+    async updateProduct(updateProduct: UpdateProductDto): Promise<UpdateProductDto>{
+        const {_id, name, category, price} = updateProduct;
+        console.log(price)
+        const result = await this.productModel.findOneAndUpdate({_id: _id}, {name: name, category: category, price: price});
+        return updateProduct;
     }
 
     async deleteProduct(id:string): Promise<void> {

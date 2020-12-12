@@ -6,5 +6,6 @@ export declare class CommandController {
     constructor(commandService: CommandService);
     createcommand(command: Command): Promise<Command>;
     getCommand(mode: Mode): Promise<Command[]>;
+    getCommands(): Promise<Command[]>;
     deleteCommand(id: string): Promise<void>;
 }

@@ -12,6 +12,9 @@ export class Product extends Document{
 
   @Prop()
   price: number;
+
+  @Prop()
+  tva: number;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

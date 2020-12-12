@@ -29,18 +29,22 @@ let CommandService = class CommandService {
         return this.commandModel.find({ client: client }).exec();
     }
     async createCommand(command) {
-        console.log(command);
-        const order = { mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total };
-        const createdCommand = new this.commandModel(order);
-        const existingClient = await this.searchClient(command.client);
-        if (existingClient.length === 0) {
+        const order = { mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total, totalHT: command.totalHT };
+        const existingClient = await this.clientModel.find({ _id: command.client._id });
+        console.log('client' + existingClient);
+        if (!existingClient) {
             const createdClient = new this.clientModel(command.client);
             createdClient.save();
         }
+        const createdCommand = new this.commandModel(order);
+        console.log(createdCommand);
         return createdCommand.save();
     }
     async getCommand(mode) {
         return this.commandModel.find({ mode: mode });
+    }
+    async getCommands() {
+        return this.commandModel.find();
     }
     async deleteCommand(id) {
         const result = await this.commandModel.remove({ _id: id });

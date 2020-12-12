@@ -26,6 +26,10 @@ __decorate([
     mongoose_1.Prop(),
     __metadata("design:type", Number)
 ], Product.prototype, "price", void 0);
+__decorate([
+    mongoose_1.Prop(),
+    __metadata("design:type", Number)
+], Product.prototype, "tva", void 0);
 Product = __decorate([
     mongoose_1.Schema()
 ], Product);

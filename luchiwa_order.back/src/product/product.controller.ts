@@ -22,7 +22,7 @@ export class ProductController {
 
     @Put()
     updateProduct(
-        @Body() updateProductDto: UpdateProductDto): Promise<Product>{
+        @Body() updateProductDto: UpdateProductDto): Promise<UpdateProductDto>{
         return this.productService.updateProduct(updateProductDto);
         }
 

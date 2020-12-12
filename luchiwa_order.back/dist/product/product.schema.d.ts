@@ -3,5 +3,6 @@ export declare class Product extends Document {
     name: string;
     category: string;
     price: number;
+    tva: number;
 }
 export declare const ProductSchema: import("mongoose").Schema<any>;

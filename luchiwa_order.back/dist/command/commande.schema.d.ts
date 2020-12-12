@@ -9,6 +9,7 @@ export declare class Command extends Document {
     products: Product[];
     cutlery: number;
     table: number;
+    totalHT: number;
     total: number;
 }
 export declare const CommandSchema: import("mongoose").Schema<any>;

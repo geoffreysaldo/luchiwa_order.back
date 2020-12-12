@@ -6,6 +6,6 @@ export declare class ProductService {
     constructor(productModel: Model<Product>);
     getProductByCategory(category: string): Promise<Product[]>;
     createProduct(product: Product): Promise<Product>;
-    updateProduct(updateProduct: UpdateProductDto): Promise<Product>;
+    updateProduct(updateProduct: UpdateProductDto): Promise<UpdateProductDto>;
     deleteProduct(id: string): Promise<void>;
 }

@@ -19,7 +19,12 @@ export class CommandController {
         @Param('mode') mode: Mode): Promise<Command[]>{
             return this.commandService.getCommand(mode)
         }
-    
+
+    @Get()
+    getCommands(): Promise<Command[]>{
+      return this.commandService.getCommands();
+    }
+
 
     @Delete('/:id')
     deleteCommand(

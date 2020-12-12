@@ -25,6 +25,9 @@ export class Command extends Document{
   table: number;
 
   @Prop()
+  totalHT: number;
+
+  @Prop()
   total: number;
 }
 

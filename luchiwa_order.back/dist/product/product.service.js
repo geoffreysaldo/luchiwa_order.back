@@ -25,12 +25,15 @@ let ProductService = class ProductService {
         return this.productModel.find({ category: category }).exec();
     }
     async createProduct(product) {
+        console.log(product);
         const createdProduct = new this.productModel(product);
         return createdProduct.save();
     }
     async updateProduct(updateProduct) {
-        const { id, price } = updateProduct;
-        return this.productModel.findOneAndUpdate({ _id: id }, { price: price });
+        const { _id, name, category, price } = updateProduct;
+        console.log(price);
+        const result = await this.productModel.findOneAndUpdate({ _id: _id }, { name: name, category: category, price: price });
+        return updateProduct;
     }
     async deleteProduct(id) {
         const result = await this.productModel.remove({ _id: id });
