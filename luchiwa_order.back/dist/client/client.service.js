@@ -25,6 +25,11 @@ let ClientService = class ClientService {
         const clients = await this.clientModel.find({ lastName: { $regex: '(?i)' + startClient } });
         return clients;
     }
+    async findClient(phoneNumber) {
+        console.log(phoneNumber);
+        const client = await this.clientModel.findOne({ phoneNumber: phoneNumber });
+        return client;
+    }
 };
 ClientService = __decorate([
     common_1.Injectable(),

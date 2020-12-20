@@ -13,13 +13,14 @@ const command_controller_1 = require("./command.controller");
 const mongoose_1 = require("@nestjs/mongoose");
 const commande_schema_1 = require("./commande.schema");
 const client_schema_1 = require("./client.schema");
+const client_service_1 = require("./../client/client.service");
 let CommandModule = class CommandModule {
 };
 CommandModule = __decorate([
     common_1.Module({
         imports: [mongoose_1.MongooseModule.forFeature([{ name: commande_schema_1.Command.name, schema: commande_schema_1.CommandSchema }, { name: client_schema_1.Client.name, schema: client_schema_1.ClientSchema }]),
         ],
-        providers: [command_service_1.CommandService],
+        providers: [command_service_1.CommandService, client_service_1.ClientService],
         controllers: [command_controller_1.CommandController]
     })
 ], CommandModule);

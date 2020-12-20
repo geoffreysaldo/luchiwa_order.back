@@ -19,25 +19,26 @@ const mongoose_1 = require("mongoose");
 const mongoose_2 = require("@nestjs/mongoose");
 const client_schema_1 = require("./client.schema");
 const product_service_1 = require("../product/product.service");
+const client_service_1 = require("../client/client.service");
 const product_schema_1 = require("../product/product.schema");
 let CommandService = class CommandService {
-    constructor(commandModel, clientModel) {
+    constructor(commandModel, clientModel, clientService) {
         this.commandModel = commandModel;
         this.clientModel = clientModel;
+        this.clientService = clientService;
     }
     searchClient(client) {
         return this.commandModel.find({ client: client }).exec();
     }
     async createCommand(command) {
         const order = { mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total, totalHT: command.totalHT };
-        const existingClient = await this.clientModel.find({ _id: command.client._id });
+        const existingClient = await this.clientService.findClient(command.client.phoneNumber);
         console.log('client' + existingClient);
-        if (!existingClient) {
+        if (!existingClient || existingClient.address) {
             const createdClient = new this.clientModel(command.client);
             createdClient.save();
         }
         const createdCommand = new this.commandModel(order);
-        console.log(createdCommand);
         return createdCommand.save();
     }
     async getCommand(mode) {
@@ -55,7 +56,8 @@ CommandService = __decorate([
     __param(0, mongoose_2.InjectModel(commande_schema_1.Command.name)),
     __param(1, mongoose_2.InjectModel(client_schema_1.Client.name)),
     __metadata("design:paramtypes", [mongoose_1.Model,
-        mongoose_1.Model])
+        mongoose_1.Model,
+        client_service_1.ClientService])
 ], CommandService);
 exports.CommandService = CommandService;
 //# sourceMappingURL=command.service.js.map

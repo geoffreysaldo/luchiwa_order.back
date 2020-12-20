@@ -1531,9 +1531,14 @@
         "signature": "8cf355a739a922d6553f736efc431388944201db1aa1bc9d660ca378906b94cd",
         "affectsGlobalScope": false
       },
+      "../src/client/client.service.ts": {
+        "version": "d84fa31212bdf0b9fd8c39a857bcc9cbad0994c26f20aacb17ad85fa7dd963c6",
+        "signature": "f11862005e8733da48ade9367ac78c6dfa0a971cb65e1835d7446e54514774cd",
+        "affectsGlobalScope": false
+      },
       "../src/command/command.service.ts": {
-        "version": "f7a4285ea0ce510a5decea29e2a3d94eb7d4abcfdfb997214d2e069888c50f08",
-        "signature": "a3c3aa958c57efd72644841846c50bf1b1774c689f1ef63c7f3456dbdc6d8d2e",
+        "version": "26781b2812fe35f4df067e03b52710fd490201b2bf0339d8bf0eba10ef5ef714",
+        "signature": "4e1050cb92497097fa03a0e4c083bea2d1e2ee666ca2fa8242505aedab154063",
         "affectsGlobalScope": false
       },
       "../src/command/command.controller.ts": {
@@ -1542,7 +1547,7 @@
         "affectsGlobalScope": false
       },
       "../src/command/command.module.ts": {
-        "version": "a7689b49722708e3ef2da672293d7507912c5961f9f962ccbd149fa1555768b9",
+        "version": "0dd8b2b5f0eb12cd8845b9ae954c4e712278abd37e27496e10e760ce0c12920c",
         "signature": "77eb1ae5a67e4c90f12880e7b9152c552b45bda7c7d5acf4935d668c1c0bc65e",
         "affectsGlobalScope": false
       },
@@ -1561,13 +1566,8 @@
         "signature": "4c8b1a9ee76fcb7fa41873710fed2c8f33f3e63cffb215eae10198e97fef0b31",
         "affectsGlobalScope": false
       },
-      "../src/client/client.service.ts": {
-        "version": "0cc21fc8e71289cf41cc23b742282b00faaa243e4111ac1ff36a5a2beb8ef9a8",
-        "signature": "db0da8350efdcaea9029c77b2896a0d2f0cbcc4e2b31a99b6ecd4c0bc800d499",
-        "affectsGlobalScope": false
-      },
       "../src/client/client.controller.ts": {
-        "version": "d133c3e2c7778a71c865bb4a1c43dc4626ea48ef5fd5fa0ae637212d7c69f097",
+        "version": "9b4a43ce80b2a26d9e3c65d3fb7179e4894688ffaf1a6b4dc39fd456b9643dc3",
         "signature": "52e8849029a8f95f3024f44d1405a3f41bcedfb4523b0a1153034f3d43595f5d",
         "affectsGlobalScope": false
       },
@@ -3463,6 +3463,7 @@
       "../src/command/command.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../src/client/client.service.ts",
         "../src/command/client.schema.ts",
         "../src/command/command.controller.ts",
         "../src/command/command.service.ts",
@@ -3472,6 +3473,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
+        "../src/client/client.service.ts",
         "../src/command/client.schema.ts",
         "../src/command/commande.schema.ts",
         "../src/command/mode.enum.ts",
@@ -4864,6 +4866,7 @@
       ],
       "../src/command/command.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
+        "../src/client/client.service.ts",
         "../src/command/client.schema.ts",
         "../src/command/commande.schema.ts",
         "../src/command/mode.enum.ts"

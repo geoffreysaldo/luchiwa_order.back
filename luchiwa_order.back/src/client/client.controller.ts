@@ -9,7 +9,6 @@ export class ClientController {
 
     @Post()
     autocompleClient(@Body() startClient: any){
-        console.log(startClient);
         return this.clientService.autocomplete(startClient.lastname);
     }
 

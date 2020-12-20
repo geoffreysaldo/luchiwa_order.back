@@ -20,7 +20,6 @@ let ClientController = class ClientController {
         this.clientService = clientService;
     }
     autocompleClient(startClient) {
-        console.log(startClient);
         return this.clientService.autocomplete(startClient.lastname);
     }
 };
