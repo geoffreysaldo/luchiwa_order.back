@@ -34,7 +34,7 @@ let CommandService = class CommandService {
         const order = { mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total, totalHT: command.totalHT };
         const existingClient = await this.clientService.findClient(command.client.phoneNumber);
         console.log('client' + existingClient);
-        if (!existingClient || existingClient.address) {
+        if (!existingClient) {
             const createdClient = new this.clientModel(command.client);
             createdClient.save();
         }

@@ -1537,7 +1537,7 @@
         "affectsGlobalScope": false
       },
       "../src/command/command.service.ts": {
-        "version": "26781b2812fe35f4df067e03b52710fd490201b2bf0339d8bf0eba10ef5ef714",
+        "version": "8fdd4c1cc7695f0b0915b8a72067f13b1868a9fdb8ec2a4b7e26d0cc4b33d0df",
         "signature": "4e1050cb92497097fa03a0e4c083bea2d1e2ee666ca2fa8242505aedab154063",
         "affectsGlobalScope": false
       },
