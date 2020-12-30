@@ -22,7 +22,9 @@ let CategoryService = class CategoryService {
         this.productModel = productModel;
     }
     async getCategories() {
-        return this.productModel.distinct('category').exec();
+        const result = await this.productModel.distinct('category').exec();
+        result.sort();
+        return result;
     }
 };
 CategoryService = __decorate([

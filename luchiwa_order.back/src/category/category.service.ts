@@ -9,6 +9,8 @@ export class CategoryService {
     constructor(@InjectModel(Product.name) private readonly productModel: Model<Product>){}
 
     async getCategories(): Promise<string[]>{
-        return this.productModel.distinct('category').exec()
+        const result = await this.productModel.distinct('category').exec()
+        result.sort();
+        return result
     }
 }

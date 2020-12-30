@@ -48,6 +48,10 @@ __decorate([
     mongoose_1.Prop(),
     __metadata("design:type", Number)
 ], Command.prototype, "total", void 0);
+__decorate([
+    mongoose_1.Prop(),
+    __metadata("design:type", Number)
+], Command.prototype, "reduction", void 0);
 Command = __decorate([
     mongoose_1.Schema()
 ], Command);
