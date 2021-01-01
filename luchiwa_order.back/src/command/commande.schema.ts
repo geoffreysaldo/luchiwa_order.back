@@ -31,7 +31,7 @@ export class Command extends Document{
   total: number;
 
   @Prop()
-  reduction: number;
+  discount: number;
 }
 
 export const CommandSchema = SchemaFactory.createForClass(Command);
