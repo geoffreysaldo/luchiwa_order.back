@@ -52,6 +52,10 @@ __decorate([
     mongoose_1.Prop(),
     __metadata("design:type", Number)
 ], Command.prototype, "discount", void 0);
+__decorate([
+    mongoose_1.Prop(),
+    __metadata("design:type", String)
+], Command.prototype, "payment", void 0);
 Command = __decorate([
     mongoose_1.Schema()
 ], Command);

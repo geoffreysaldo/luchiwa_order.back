@@ -12,5 +12,6 @@ export declare class Command extends Document {
     totalHT: number;
     total: number;
     discount: number;
+    payment: string;
 }
 export declare const CommandSchema: import("mongoose").Schema<any>;

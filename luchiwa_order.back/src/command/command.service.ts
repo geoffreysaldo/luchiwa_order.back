@@ -20,7 +20,8 @@ export class CommandService {
         }
 
     async createCommand(command: Command){
-        const order = {mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total, totalHT: command.totalHT, discount: command.discount}
+        const order = {mode: command.mode, hour: command.hour, client: command.client, products: command.products, cutlery: command.cutlery, table: command.table, total: command.total, totalHT: command.totalHT, discount: command.discount, payment: command.payment}
+        console.log(command.client)
         const existingClient = await this.clientService.findClient(command.client.phoneNumber);
         if(existingClient === null){
             const createdClient = new this.clientModel(command.client);

@@ -32,6 +32,9 @@ export class Command extends Document{
 
   @Prop()
   discount: number;
+
+  @Prop()
+  payment: string;
 }
 
 export const CommandSchema = SchemaFactory.createForClass(Command);
